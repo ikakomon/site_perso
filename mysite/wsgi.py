@@ -8,9 +8,9 @@ https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 """
 
 import os
-
+from decouple import config, Csv
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings.dev")
-
+if config('DEBUG', default=False, cast=bool)==True:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings.dev")
+else : os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings.prod")
 application = get_wsgi_application()

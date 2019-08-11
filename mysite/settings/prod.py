@@ -1,10 +1,11 @@
+from decouple import config, Csv
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fzguzeg(lzug*r(#!6%#*ga0=4^pwcsj#2ra-qb#zd5rfm9lis'
+SECRET_KEY = config('SECRET_KEY')
 
 # Add your site's domain name(s) here.
 ALLOWED_HOSTS = ['www.lecoindescoquettes.fr','.lecoindescoquettes.fr']
