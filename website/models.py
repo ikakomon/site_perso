@@ -42,6 +42,7 @@ class ArticleIndexPage(CoderedArticleIndexPage):
     subpage_types = ['website.ArticlePage']
 
     template = 'coderedcms/pages/article_index_page.html'
+    #template = 'website/templates/coderedcms/pages/index_article_page.html'
 
 
 class FormPage(CoderedFormPage):

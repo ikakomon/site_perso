@@ -7,7 +7,7 @@ DEBUG = False
 SECRET_KEY = 'fzguzeg(lzug*r(#!6%#*ga0=4^pwcsj#2ra-qb#zd5rfm9lis'
 
 # Add your site's domain name(s) here.
-ALLOWED_HOSTS = ['www.example.com']
+ALLOWED_HOSTS = ['www.lecoindescoquettes.fr','.lecoindescoquettes.fr']
 
 # To send email from the server, we recommend django_sendmail_backend
 # Or specify your own email backend such as an SMTP server.
@@ -15,7 +15,7 @@ ALLOWED_HOSTS = ['www.example.com']
 EMAIL_BACKEND = 'django_sendmail_backend.backends.EmailBackend'
 
 # Default email address used to send messages from the website.
-DEFAULT_FROM_EMAIL = 'Isaak website <info@example.com>'
+DEFAULT_FROM_EMAIL = 'Lecoindescoquettes <info@lecoindescoquettes.fr>'
 
 # A list of people who get error notifications.
 ADMINS = [
