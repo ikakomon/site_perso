@@ -2,19 +2,23 @@ from decouple import config, Csv
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
 # Add your site's domain name(s) here.
-ALLOWED_HOSTS = ['www.lecoindescoquettes.fr','.lecoindescoquettes.fr']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # To send email from the server, we recommend django_sendmail_backend
 # Or specify your own email backend such as an SMTP server.
 # https://docs.djangoproject.com/en/2.2/ref/settings/#email-backend
-EMAIL_BACKEND = 'django_sendmail_backend.backends.EmailBackend'
-
+EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = config('EMAIL_HOST', default='')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
 # Default email address used to send messages from the website.
 DEFAULT_FROM_EMAIL = 'Lecoindescoquettes <info@lecoindescoquettes.fr>'
 
