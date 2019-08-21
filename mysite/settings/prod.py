@@ -24,7 +24,7 @@ DEFAULT_FROM_EMAIL = 'Lecoindescoquettes <info@lecoindescoquettes.fr>'
 
 # A list of people who get error notifications.
 ADMINS = [
-    ('Administrator', 'admin@example.com'),
+    ('Administrator', 'mounsiisaak@gmail.com'),
 ]
 
 # A list in the same format as ADMINS that specifies who should get broken link
